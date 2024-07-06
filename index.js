@@ -5,10 +5,6 @@ const port = process.env.PORT || 9000
 
 server.use(express.json())
 
-server.get('/hello', (req, res) => {
-    res.json({ message: 'Hello from api'})
-})
-
 server.listen(port, () => {
     console.log(`listening on port ${port}`);
 })

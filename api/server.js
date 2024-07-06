@@ -10,6 +10,10 @@ const actionsRouter = require('./actions/actions-router');
 
 server.use(express.json());
 
+server.get('/hello', (req, res) => {
+    res.json({ message: 'Hello from api'})
+})
+
 server.use('/api/projects', projectsRouter);
 server.use('/api/actions', actionsRouter);
 
